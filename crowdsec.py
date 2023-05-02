@@ -37,8 +37,12 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 import csv
 import sys
+import os
 
-FILENAME = "/var/run/munin/crowdsec.raw"
+try:
+    FILENAME = os.environ["FILENAME"]
+except KeyError:
+    FILENAME = "/var/run/munin/crowdsec.raw"
 
 
 def get_data():
