@@ -53,7 +53,7 @@ def get_data():
 
         for row in reader:
             reason = row[3]
-            country = row[4]
+            country = row[5]
             # print(reason, country)
 
             if reason in reasons:
