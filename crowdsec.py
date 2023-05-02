@@ -81,13 +81,14 @@ def report():
 
 
 def config():
-    print("graph_title CrowdSec Alerts")
     print("graph_args")
     print("graph_vlabel")
     print("graph_category network")
     if output_type == "countries":
+        print("graph_title CrowdSec Alerts Countries")
         print("graph_info countries origin of attacks")
     else:
+        print("graph_title CrowdSec Alerts Reasons")
         print("graph_info type of attacks")
     print("graph_total Total")
     data = get_data()
