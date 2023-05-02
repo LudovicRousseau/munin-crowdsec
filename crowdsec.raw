@@ -1,0 +1,20 @@
+id,scope,value,reason,country,as,decisions,created_at
+34,Ip,2602:80d:1000:b0cc:e:2:8:6,crowdsecurity/http-bad-user-agent,US,398722 CENSYS-ARIN-03,ban:1,2023-02-02 22:11:08.053809693 +0000 UTC
+33,Ip,2620:96:e000:b0cc:e:2:7:5,crowdsecurity/http-bad-user-agent,US,398324 CENSYS-ARIN-01,ban:1,2023-02-02 22:10:31.483062751 +0000 UTC
+32,Ip,2620:96:e000:b0cc:e:2:2:3,crowdsecurity/http-bad-user-agent,US,398324 CENSYS-ARIN-01,ban:1,2023-02-02 22:10:31.300125434 +0000 UTC
+31,Ip,1.32.1.167,crowdsecurity/ssh-slow-bf,MY,"4788 TM Net, Internet Service Provider",ban:1,2023-02-02 22:06:47.94594301 +0000 UTC
+30,Ip,1.32.1.167,crowdsecurity/ssh-bf,MY,"4788 TM Net, Internet Service Provider",ban:1,2023-02-02 22:06:47.945955711 +0000 UTC
+26,Ip,14.179.110.180,crowdsecurity/ssh-bf,VN,45899 VNPT Corp,ban:1,2023-02-02 15:31:32.617683222 +0000 UTC
+24,Ip,2620:96:e000:b0cc:e:2:7:5,crowdsecurity/http-bad-user-agent,US,398324 CENSYS-ARIN-01,ban:1,2023-02-02 13:57:58.225037558 +0000 UTC
+23,Ip,2620:96:e000:b0cc:e:2:2:2,crowdsecurity/http-bad-user-agent,US,398324 CENSYS-ARIN-01,ban:1,2023-02-02 13:54:58.394613371 +0000 UTC
+21,Ip,194.5.83.9,crowdsecurity/apache_log4j2_cve-2021-44228,HK,137409 GSL Networks Pty LTD,ban:1,2023-02-02 12:55:46.04562776 +0000 UTC
+20,Ip,92.174.243.241,crowdsecurity/http-sensitive-files,FR,3215 Orange,ban:1,2023-02-02 12:54:17.970147481 +0000 UTC
+19,Ip,201.93.194.224,crowdsecurity/ssh-bf,BR,27699 TELEFONICA BRASIL S.A,ban:1,2023-02-02 11:40:02.200002749 +0000 UTC
+17,Ip,207.154.244.8,crowdsecurity/ssh-slow-bf,DE,14061 DIGITALOCEAN-ASN,ban:1,2023-02-02 10:47:59.929851893 +0000 UTC
+13,Ip,86.166.183.161,crowdsecurity/ssh-bf,GB,2856 British Telecommunications PLC,ban:1,2023-02-02 05:09:22.937407211 +0000 UTC
+11,Ip,190.136.82.128,crowdsecurity/ssh-bf,AR,7303 Telecom Argentina S.A.,ban:1,2023-02-02 03:11:58.471117154 +0000 UTC
+9,Ip,27.75.116.15,crowdsecurity/ssh-bf,VN,7552 Viettel Group,ban:1,2023-02-02 01:17:17.145661872 +0000 UTC
+7,Ip,178.128.82.227,crowdsecurity/http-sensitive-files,SG,14061 DIGITALOCEAN-ASN,ban:1,2023-02-01 22:32:46.840892047 +0000 UTC
+6,Ip,178.128.82.227,crowdsecurity/http-bad-user-agent,SG,14061 DIGITALOCEAN-ASN,ban:1,2023-02-01 22:32:46.837229743 +0000 UTC
+4,Ip,189.181.209.143,crowdsecurity/ssh-bf,MX,8151 Uninet S.A. de C.V.,ban:1,2023-02-01 20:14:03.148083893 +0000 UTC
+2,Ip,93.159.221.18,crowdsecurity/ssh-slow-bf,RU,209024 MTS PJSC,ban:1,2023-02-01 17:46:18.660762352 +0000 UTC
