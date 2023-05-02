@@ -96,9 +96,11 @@ def config():
         print("graph_info type of attacks")
     print("graph_total Total")
     data = get_data()
+    s = "AREA"
     for d in data:
         print("{}.label {}".format(d, d))
-        print("{}.draw STACK".format(d))
+        print("{}.draw {}".format(d, s))
+        s = "STACK"
 
 
 def main():
