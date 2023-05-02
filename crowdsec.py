@@ -38,7 +38,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 import csv
 import sys
 
-FILENAME = "crowdsec.raw"
+FILENAME = "/tmp/crowdsec.raw"
 
 
 def get_data():
