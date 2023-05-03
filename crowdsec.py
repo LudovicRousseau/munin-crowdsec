@@ -38,6 +38,8 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 import csv
 import sys
 import os
+import time
+import json
 
 try:
     FILENAME = os.environ["FILENAME"]
@@ -46,8 +48,25 @@ except KeyError:
 
 
 def get_data():
+    # the filename is something like
+    # /var/lib/munin-node/plugin-state/nobody/crowdsec-
+    previous_data_filename = os.environ.get('MUNIN_STATEFILE', 'crowdsec-STATEFILE')
+    try:
+        with open(previous_data_filename) as f:
+            data = json.load(f)
+    except (FileNotFoundError, json.decoder.JSONDecodeError):
+        # starts with empty dictionnaries
+        data = {'countries': {}, 'reasons': {}}
+
+    # reuse previous data
     countries = dict()
+    for country in data["countries"]:
+        countries[country] = 0
     reasons = dict()
+    for reason in data["reasons"]:
+        reasons[reason] = 0
+
+    current_time = int(time.time())
 
     with open(FILENAME) as csvfile:
         reader = csv.reader(csvfile)
@@ -69,6 +88,28 @@ def get_data():
                 countries[country] += 1
             else:
                 countries[country] = 1
+
+            data["reasons"][reason] = current_time
+            data["countries"][country] = current_time
+
+    # remove old data
+    to_remove = list()
+    for country in data["countries"]:
+        if current_time - data["countries"][country] > 365 * 24 * 60 * 60:
+            to_remove.append(country)
+    for country in to_remove:
+        del data["countries"][country]
+
+    to_remove = list()
+    for reason in data["reasons"]:
+        if current_time - data["reasons"][reason] > 365 * 24 * 60 * 60:
+            to_remove.append(reason)
+    for reason in to_remove:
+        del data["reasons"][reason]
+
+    # update JSON file
+    with open(previous_data_filename, "w") as f:
+        json.dump(data, f)
 
     if output_type == "countries":
         data = countries
