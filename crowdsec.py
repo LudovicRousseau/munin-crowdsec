@@ -121,7 +121,7 @@ def get_data():
 
 def report():
     data = get_data()
-    for d in data:
+    for d in sorted(data):
         print("{}.value {}".format(d, data[d]))
 
 
@@ -138,7 +138,7 @@ def config():
     print("graph_total Total")
     data = get_data()
     s = "AREA"
-    for d in data:
+    for d in sorted(data):
         print("{}.label {}".format(d, d))
         print("{}.draw {}".format(d, s))
         s = "STACK"
